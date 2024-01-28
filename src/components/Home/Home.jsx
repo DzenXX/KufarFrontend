@@ -8,7 +8,6 @@ import BodyCart from './BodyCart/BodyCart';
 import { fetchPosts, selectPosts, selectSearchValue } from '../../redux/slices/post';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import '../../styles/css/style.css'
 
 
 
