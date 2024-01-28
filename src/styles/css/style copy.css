@@ -1,0 +1,1778 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+._default {
+  cursor: default;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+@font-face {
+  font-family: "icon";
+  src: url("../fonts/icon.eot?9etc2u");
+  src: url("../fonts/icon.eot?9etc2u#iefix") format("embedded-opentype"), url("../fonts/icon.ttf?9etc2u") format("truetype"), url("../fonts/icon.woff?9etc2u") format("woff"), url("../fonts/icon.svg?9etc2u#icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-share-2:before {
+  content: "\e904";
+}
+
+._icon-gps_fixed:before {
+  content: "\e905";
+}
+
+._icon-my_location:before {
+  content: "\e905";
+}
+
+._icon-user-o:before {
+  content: "\e900";
+}
+
+._icon-comment-o:before {
+  content: "\e903";
+}
+
+._icon-search1:before {
+  content: "\e907";
+}
+
+._icon-compass:before {
+  content: "\e906";
+}
+
+._icon-arrow-down:before {
+  content: "\e909";
+}
+
+.fullscreen {
+  height: 100vh;
+  width: 100%;
+  background-color: #EAE9E9;
+  padding: 30px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1150px) {
+  .fullscreen {
+    padding: 30px 45px;
+  }
+}
+@media (max-width: 790px) {
+  .fullscreen {
+    padding: 15px 25px;
+  }
+}
+.fullscreen__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fullscreen__body {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+}
+.fullscreen__burger {
+  display: none;
+}
+@media (max-width: 790px) {
+  .fullscreen__burger {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+  }
+  .fullscreen__burger span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 13px;
+  }
+  .fullscreen__burger::after, .fullscreen__burger::before {
+    content: " ";
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+  .fullscreen__burger::before {
+    top: 0;
+  }
+  .fullscreen__burger::after {
+    bottom: 0;
+  }
+}
+@media (max-width: 790px) {
+  .fullscreen__account {
+    position: fixed;
+  }
+}
+@media (max-width: 960px) {
+  .fullscreen__account svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 790px) {
+  .fullscreen__account svg {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.logo {
+  font-size: 48px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+}
+@media (max-width: 960px) {
+  .logo {
+    font-size: 36px;
+  }
+}
+@media (max-width: 790px) {
+  .logo {
+    font-size: 32px;
+  }
+}
+.logo__green {
+  color: #308446;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+}
+@media (max-width: 1150px) {
+  .navbar {
+    width: 550px;
+  }
+}
+@media (max-width: 960px) {
+  .navbar {
+    width: 450px;
+  }
+}
+@media (max-width: 790px) {
+  .navbar {
+    position: fixed;
+  }
+}
+.navbar__link {
+  font-size: 24px;
+  font-family: "Overpass";
+  color: #FFF;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: 0.75s;
+}
+.navbar__link:hover {
+  color: #308446;
+  cursor: pointer;
+}
+@media (max-width: 960px) {
+  .navbar__link {
+    font-size: 22px;
+  }
+}
+@media (max-width: 790px) {
+  .navbar__link {
+    font-size: 20px;
+  }
+}
+.navbar__search {
+  font-size: 24px;
+  font-family: "Overpass";
+  color: #FFF;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: 0.75s;
+}
+.navbar__search:hover {
+  color: #308446;
+  cursor: pointer;
+}
+@media (max-width: 960px) {
+  .navbar__search {
+    font-size: 22px;
+  }
+}
+@media (max-width: 790px) {
+  .navbar__search {
+    font-size: 20px;
+  }
+}
+
+.body {
+  position: relative;
+}
+.body__slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body__title {
+  font-size: 64px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+@media (max-width: 1150px) {
+  .body__title {
+    font-size: 56px;
+  }
+}
+@media (max-width: 960px) {
+  .body__title {
+    font-size: 48px;
+  }
+}
+.body__subtitle {
+  font-size: 32px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+@media (max-width: 1150px) {
+  .body__subtitle {
+    font-size: 28px;
+  }
+}
+@media (max-width: 960px) {
+  .body__subtitle {
+    font-size: 24px;
+  }
+}
+.body__arrow {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 36px);
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  animation: arrow-movement 0.75s infinite linear;
+  transition: 0.3s;
+}
+.body__arrow:hover {
+  scale: 1.3;
+  cursor: pointer;
+}
+@keyframes arrow-movement {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: 2px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  75% {
+    bottom: -2px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.map {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.map__arrow {
+  position: absolute;
+  z-index: 400;
+  left: calc(50% - 36px);
+  transform: rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #232620;
+  animation: arrow-movement-map 0.75s infinite linear;
+  transition: 0.3s;
+}
+.map__arrow:hover {
+  scale: 1.3;
+  cursor: pointer;
+}
+@keyframes arrow-movement-map {
+  0% {
+    top: 30px;
+  }
+  25% {
+    top: 32px;
+  }
+  50% {
+    top: 30px;
+  }
+  75% {
+    top: 28px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+.map__attention {
+  position: absolute;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 400;
+  bottom: 50px;
+  right: 53%;
+  transform: translate(50%, 0);
+  width: 790px;
+  background-color: #232620;
+  border-radius: 30px;
+  padding: 10px 15px;
+  animation: show-attantion 0.5s ease forwards;
+}
+.map__attention._hidden {
+  animation: hide 0.5s ease forwards;
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: 7;
+  }
+}
+@keyframes show-attantion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 870px) {
+  .map__attention {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    right: 55%;
+  }
+}
+@media (max-width: 550px) {
+  .map__attention {
+    width: 250px;
+    right: 56%;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 450px) {
+  .map__attention {
+    width: 215px;
+    right: 58%;
+    padding: 5px 10px;
+  }
+}
+.map__view {
+  position: absolute;
+  z-index: 400;
+  bottom: 0;
+  left: -660px;
+  transition: left 0.5s ease;
+}
+.map__view._active {
+  left: 0px;
+}
+.map__form {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: -360px;
+  height: 100%;
+  width: 360px;
+  background-color: #232620;
+  transition: right 0.5s ease;
+}
+.map__form._active {
+  right: 0px;
+}
+@media (max-width: 550px) {
+  .map__form._active {
+    right: 0;
+  }
+}
+@media (max-width: 550px) {
+  .map__form {
+    top: 50%;
+    right: -100%;
+    height: 50%;
+    width: 100%;
+  }
+}
+.map__item {
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 550px) {
+  .map__item {
+    width: 100%;
+  }
+}
+
+.attention__text {
+  font-weight: 200;
+  display: inline;
+  vertical-align: middle;
+  color: #FFF;
+  font-family: "Overpass";
+  font-size: 20px;
+}
+@media (max-width: 550px) {
+  .attention__text {
+    font-size: 18px;
+  }
+}
+.attention__button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #39ACB4;
+  height: 30px;
+  width: 190px;
+  border-radius: 15px;
+  font-family: "Overpass";
+  font-size: 20px;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.attention__button:hover {
+  color: #FFF;
+}
+@media (max-width: 870px) {
+  .attention__button {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .attention__button {
+    font-size: 18px;
+  }
+}
+
+.view {
+  width: 660px;
+  height: 330px;
+  background-color: #232620;
+  border-radius: 0 25px 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.view__info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view__title {
+  font-size: 32px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+}
+.view__subtitle {
+  font-size: 20px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+  font-style: italic;
+}
+.view__button {
+  width: 120px;
+  height: 40px;
+  background-color: #308446;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Overpass";
+  color: #FFF;
+  cursor: pointer;
+}
+.view__image {
+  width: 250px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+}
+.view__cancel {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.form {
+  padding-top: 150px;
+}
+@media (max-width: 550px) {
+  .form {
+    padding-top: 30px;
+  }
+}
+.form__content {
+  position: relative;
+  height: 100%;
+}
+.form__end {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.form__name {
+  font-family: "Overpass";
+  font-style: italic;
+  font-weight: 300;
+  padding-top: 1px;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  width: 90%;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  color: #308446;
+  background-color: #191b17;
+  box-sizing: border-box;
+  border: #308446 2px solid;
+}
+.form__name:focus {
+  padding-left: 9px;
+  border: #308446 3px solid;
+}
+.form__name::placeholder {
+  color: #308446;
+  opacity: 0.7;
+}
+@media (max-width: 550px) {
+  .form__name {
+    margin-bottom: 20px;
+  }
+}
+.form__about {
+  font-family: "Overpass";
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #308446;
+  width: 90%;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: #191b17;
+  box-sizing: border-box;
+  border: #308446 2px solid;
+  resize: none;
+}
+.form__about:focus {
+  padding: 9px;
+  border: #308446 3px solid;
+}
+.form__about::placeholder {
+  color: #308446;
+  opacity: 0.7;
+}
+@media (max-width: 550px) {
+  .form__about {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+.form__image {
+  height: 130px;
+  width: 130px;
+  margin-left: 20px;
+  border-radius: 8px;
+  background-color: #191b17;
+  margin-bottom: 10px;
+  background-size: contain;
+}
+@media (max-width: 550px) {
+  .form__image {
+    height: 100px;
+    width: 100px;
+  }
+}
+.form__file {
+  position: relative;
+  width: 130px;
+  height: 25px;
+  margin-left: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form__file > input {
+  z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form__file > button {
+  font-family: "Overpass";
+  color: #232620;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  padding-top: 1px;
+  background-color: #308446;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.form__file:hover > button {
+  color: #FFF;
+}
+.form__button {
+  padding-top: 1px;
+  color: #232620;
+  font-size: 20px;
+  font-family: "Overpass";
+  border-radius: 22px;
+  width: 120px;
+  height: 45px;
+  transition: color 0.5s ease;
+}
+.form__button:hover {
+  color: #FFF;
+}
+.form__button_submit {
+  background-color: #308446;
+}
+.form__button_cancel {
+  background-color: #C63A3A;
+}
+
+.my_hint {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  left: 5px;
+  bottom: 15px;
+  width: auto;
+  height: auto;
+  line-height: 17px;
+  position: relative;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #232620;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.map {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.map__arrow {
+  position: absolute;
+  z-index: 400;
+  left: calc(50% - 36px);
+  transform: rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #232620;
+  animation: arrow-movement-map 0.75s infinite linear;
+  transition: 0.3s;
+}
+.map__arrow:hover {
+  scale: 1.3;
+  cursor: pointer;
+}
+@keyframes arrow-movement-map {
+  0% {
+    top: 30px;
+  }
+  25% {
+    top: 32px;
+  }
+  50% {
+    top: 30px;
+  }
+  75% {
+    top: 28px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+.map__attention {
+  position: absolute;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 400;
+  bottom: 50px;
+  right: 53%;
+  transform: translate(50%, 0);
+  width: 790px;
+  background-color: #232620;
+  border-radius: 30px;
+  padding: 10px 15px;
+  animation: show-attantion 0.5s ease forwards;
+}
+.map__attention._hidden {
+  animation: hide 0.5s ease forwards;
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: 7;
+  }
+}
+@keyframes show-attantion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 870px) {
+  .map__attention {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    right: 55%;
+  }
+}
+@media (max-width: 550px) {
+  .map__attention {
+    width: 250px;
+    right: 56%;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 450px) {
+  .map__attention {
+    width: 215px;
+    right: 58%;
+    padding: 5px 10px;
+  }
+}
+.map__view {
+  position: absolute;
+  z-index: 400;
+  bottom: 0;
+  left: -660px;
+  transition: left 0.5s ease;
+}
+.map__view._active {
+  left: 0px;
+}
+.map__form {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: -360px;
+  height: 100%;
+  width: 360px;
+  background-color: #232620;
+  transition: right 0.5s ease;
+}
+.map__form._active {
+  right: 0px;
+}
+@media (max-width: 550px) {
+  .map__form._active {
+    right: 0;
+  }
+}
+@media (max-width: 550px) {
+  .map__form {
+    top: 50%;
+    right: -100%;
+    height: 50%;
+    width: 100%;
+  }
+}
+.map__item {
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 550px) {
+  .map__item {
+    width: 100%;
+  }
+}
+
+.attention__text {
+  font-weight: 200;
+  display: inline;
+  vertical-align: middle;
+  color: #FFF;
+  font-family: "Overpass";
+  font-size: 20px;
+}
+@media (max-width: 550px) {
+  .attention__text {
+    font-size: 18px;
+  }
+}
+.attention__button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #39ACB4;
+  height: 30px;
+  width: 190px;
+  border-radius: 15px;
+  font-family: "Overpass";
+  font-size: 20px;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.attention__button:hover {
+  color: #FFF;
+}
+@media (max-width: 870px) {
+  .attention__button {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .attention__button {
+    font-size: 18px;
+  }
+}
+
+.view {
+  width: 660px;
+  height: 330px;
+  background-color: #232620;
+  border-radius: 0 25px 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.view__info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view__title {
+  font-size: 32px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+}
+.view__subtitle {
+  font-size: 20px;
+  font-family: "Overpass";
+  color: #FFF;
+  vertical-align: middle;
+  font-style: italic;
+}
+.view__button {
+  width: 120px;
+  height: 40px;
+  background-color: #308446;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Overpass";
+  color: #FFF;
+  cursor: pointer;
+}
+.view__image {
+  width: 250px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+}
+.view__cancel {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.form {
+  padding-top: 150px;
+}
+@media (max-width: 550px) {
+  .form {
+    padding-top: 30px;
+  }
+}
+.form__content {
+  position: relative;
+  height: 100%;
+}
+.form__end {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.form__name {
+  font-family: "Overpass";
+  font-style: italic;
+  font-weight: 300;
+  padding-top: 1px;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  width: 90%;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  color: #308446;
+  background-color: #191b17;
+  box-sizing: border-box;
+  border: #308446 2px solid;
+}
+.form__name:focus {
+  padding-left: 9px;
+  border: #308446 3px solid;
+}
+.form__name::placeholder {
+  color: #308446;
+  opacity: 0.7;
+}
+@media (max-width: 550px) {
+  .form__name {
+    margin-bottom: 20px;
+  }
+}
+.form__about {
+  font-family: "Overpass";
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #308446;
+  width: 90%;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: #191b17;
+  box-sizing: border-box;
+  border: #308446 2px solid;
+  resize: none;
+}
+.form__about:focus {
+  padding: 9px;
+  border: #308446 3px solid;
+}
+.form__about::placeholder {
+  color: #308446;
+  opacity: 0.7;
+}
+@media (max-width: 550px) {
+  .form__about {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+}
+.form__image {
+  height: 130px;
+  width: 130px;
+  margin-left: 20px;
+  border-radius: 8px;
+  background-color: #191b17;
+  margin-bottom: 10px;
+  background-size: contain;
+}
+@media (max-width: 550px) {
+  .form__image {
+    height: 100px;
+    width: 100px;
+  }
+}
+.form__file {
+  position: relative;
+  width: 130px;
+  height: 25px;
+  margin-left: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form__file > input {
+  z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form__file > button {
+  font-family: "Overpass";
+  color: #232620;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  padding-top: 1px;
+  background-color: #308446;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.form__file:hover > button {
+  color: #FFF;
+}
+.form__button {
+  padding-top: 1px;
+  color: #232620;
+  font-size: 20px;
+  font-family: "Overpass";
+  border-radius: 22px;
+  width: 120px;
+  height: 45px;
+  transition: color 0.5s ease;
+}
+.form__button:hover {
+  color: #FFF;
+}
+.form__button_submit {
+  background-color: #308446;
+}
+.form__button_cancel {
+  background-color: #C63A3A;
+}
+
+.my_hint {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  left: 5px;
+  bottom: 15px;
+  width: auto;
+  height: auto;
+  line-height: 17px;
+  position: relative;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #232620;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.about {
+  overflow: hidden;
+}
+
+.wrapper {
+  background-image: url(../img/alex-knight-5-GNa303REg-unsplashblacked.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.information {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 280px;
+}
+@media (max-width: 1260px) {
+  .information {
+    padding: 0 230px;
+  }
+}
+@media (max-width: 1150px) {
+  .information {
+    padding: 0 200px;
+  }
+}
+@media (max-width: 920px) {
+  .information {
+    padding: 0 180px;
+  }
+}
+@media (max-width: 790px) {
+  .information {
+    padding: 0 120px;
+  }
+}
+@media (max-width: 600px) {
+  .information {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 500px) {
+  .information {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 400px) {
+  .information {
+    padding: 0 15px;
+  }
+}
+.information__slider {
+  height: 80%;
+}
+.information__slide {
+  display: flex;
+  justify-content: center;
+}
+.information__content {
+  height: 100%;
+  width: 85%;
+  font-size: 28px;
+  font-family: "Overpass";
+  color: #FFF;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 920px) {
+  .information__content {
+    font-size: 24px;
+    width: 75%;
+  }
+}
+@media (max-width: 600px) {
+  .information__content {
+    font-size: 22px;
+  }
+}
+@media (max-width: 400px) {
+  .information__content {
+    font-size: 20px;
+  }
+}
+.information__title {
+  display: inline;
+  margin-bottom: 15px;
+  font-size: 48px;
+  font-family: "Overpass";
+  color: #FFF;
+  padding: 0 15px;
+}
+@media (max-width: 790px) {
+  .information__title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 600px) {
+  .information__title {
+    font-size: 34px;
+  }
+}
+.information__text {
+  opacity: 0.95;
+}
+.information__link {
+  color: #00A550;
+  opacity: 0.95;
+  cursor: pointer;
+  text-decoration: none;
+}
+.information__divisor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 1150px) {
+  .information__divisor {
+    flex-direction: column;
+  }
+}
+.information__mail, .information__github {
+  display: flex;
+  flex-direction: column;
+}
+.information__github {
+  margin: 0 0 0 25px;
+}
+@media (max-width: 1150px) {
+  .information__github {
+    margin: 0;
+  }
+}
+.information__team-idea {
+  margin-left: 25px;
+}
+@media (max-width: 1150px) {
+  .information__team-idea {
+    margin: 0;
+  }
+}
+
+.bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 0 25px 0 25px;
+}
+@media (max-width: 920px) {
+  .bottom {
+    padding: 0 15px 0 15px;
+  }
+}
+@media (max-width: 790px) {
+  .bottom {
+    height: 72px;
+    flex-direction: column;
+    padding: 5px 15px 5px 15px;
+  }
+}
+.bottom__media {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+@media (max-width: 1260px) {
+  .bottom__media {
+    width: 25%;
+  }
+}
+@media (max-width: 1150px) {
+  .bottom__media {
+    width: 28%;
+  }
+}
+@media (max-width: 920px) {
+  .bottom__media {
+    width: 30%;
+  }
+}
+@media (max-width: 790px) {
+  .bottom__media {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .bottom__media {
+    width: 55%;
+  }
+}
+@media (max-width: 500px) {
+  .bottom__media {
+    width: 65%;
+  }
+}
+@media (max-width: 400px) {
+  .bottom__media {
+    width: 70%;
+  }
+}
+.bottom__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.bottom .logo {
+  font-size: 36px;
+  text-decoration: none;
+  position: static;
+}
+@media (max-width: 790px) {
+  .bottom .logo {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .bottom .logo {
+    font-size: 36px;
+  }
+}
+@media (max-width: 400px) {
+  .bottom .logo {
+    font-size: 28px;
+  }
+}
+.bottom__svg {
+  width: 28px;
+  height: 28px;
+  fill: #F7FFEF;
+  transition: 0.5s;
+}
+@media (max-width: 790px) {
+  .bottom__svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .bottom__svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 400px) {
+  .bottom__svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.bottom__svg:hover {
+  fill: #308446;
+  cursor: pointer;
+}
+.bottom__copyright {
+  font-size: 12px;
+  font-family: "Overpass";
+  display: flex;
+  color: #FFF;
+}
+@media (max-width: 600px) {
+  .bottom__copyright {
+    font-size: 12px;
+  }
+}
+
+.popup {
+  opacity: 0;
+  display: none;
+  transition: all 0.7s ease;
+}
+
+.popup.open {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.591);
+  opacity: 1;
+  z-index: 3000;
+}
+.login__header {
+  font-size: 30px;
+  font-family: "Overpass";
+  text-align: center;
+  margin: 15px 0 5px 0;
+  color: #308446;
+}
+.login__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__icon span {
+  font-size: 80px;
+  color: #308446;
+  margin-bottom: 35px;
+}
+.login__menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background-color: #232620;
+  opacity: 1;
+  z-index: 301;
+  border-radius: 16px;
+  border: 2px #308446 solid;
+  box-sizing: border-box;
+  font-family: "Overpass";
+}
+.login__name {
+  height: 30px;
+  font-size: 24px;
+  width: 210px;
+  margin-left: 43px;
+  border-radius: 8px;
+  padding: 0 5px;
+  background-color: #191b17;
+  color: #308446;
+  margin-bottom: 15px;
+}
+.login__name:focus {
+  padding: 0 3px;
+  border: #308446 2px solid;
+}
+.login__name::placeholder {
+  opacity: 0.6;
+  color: #308446;
+}
+.login__password {
+  height: 30px;
+  font-size: 24px;
+  width: 210px;
+  margin-left: 43px;
+  padding: 0 5px;
+  background-color: #191b17;
+  color: #308446;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.login__password:focus {
+  padding: 0 3px;
+  border: #308446 2px solid;
+}
+.login__password::placeholder {
+  opacity: 0.6;
+  color: #308446;
+}
+.login__button {
+  display: block;
+  height: 30px;
+  width: auto;
+  padding: 0 8px;
+  font-size: 25px;
+  line-height: 0px;
+  font-family: "Overpass";
+  background-color: #308446;
+  color: #232620;
+  border-radius: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.login__button span {
+  position: relative;
+  top: 2px;
+}
+.login__button:hover {
+  color: #FFF;
+}
+.login__bottom {
+  color: #FFF;
+  position: absolute;
+  font-style: italic;
+  bottom: 10px;
+  left: -5px;
+  text-align: center;
+}
+.login__redirect {
+  text-decoration: none;
+  color: #308446;
+  cursor: pointer;
+}
+
+.reg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.591);
+  opacity: 1;
+  z-index: 300;
+}
+.reg__header {
+  font-size: 30px;
+  font-family: "Overpass";
+  text-align: center;
+  margin: 15px 0 5px 0;
+  color: #308446;
+}
+.reg__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg__icon span {
+  font-size: 80px;
+  color: #308446;
+  margin-bottom: 35px;
+}
+.reg__menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background-color: #232620;
+  opacity: 1;
+  z-index: 301;
+  border-radius: 16px;
+  border: 2px #308446 solid;
+  box-sizing: border-box;
+  font-family: "Overpass";
+}
+.reg__name {
+  height: 30px;
+  font-size: 24px;
+  width: 210px;
+  margin-left: 43px;
+  border-radius: 8px;
+  padding: 0 5px;
+  background-color: #191b17;
+  color: #308446;
+  margin-bottom: 15px;
+}
+.reg__name:focus {
+  padding: 0 3px;
+  border: #308446 2px solid;
+}
+.reg__name::placeholder {
+  opacity: 0.6;
+  color: #308446;
+}
+.reg__password {
+  height: 30px;
+  font-size: 24px;
+  width: 210px;
+  margin-left: 43px;
+  padding: 0 5px;
+  background-color: #191b17;
+  color: #308446;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.reg__password:focus {
+  padding: 0 3px;
+  border: #308446 2px solid;
+}
+.reg__password::placeholder {
+  opacity: 0.6;
+  color: #308446;
+}
+.reg__button {
+  display: block;
+  height: 30px;
+  width: auto;
+  padding: 0 8px;
+  font-size: 25px;
+  line-height: 0px;
+  font-family: "Overpass";
+  background-color: #308446;
+  color: #232620;
+  border-radius: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.reg__button span {
+  position: relative;
+  top: 2px;
+}
+.reg__button:hover {
+  color: #FFF;
+}
+.reg__bottom {
+  color: #FFF;
+  position: absolute;
+  font-style: italic;
+  bottom: 10px;
+  left: -5px;
+  text-align: center;
+}
+.reg__redirect {
+  text-decoration: none;
+  color: #308446;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,133 @@
+.chat__wrapper {
+   overflow: hidden;
+   display: flex;
+   background-color: #282c34;
+   height: 100vh;
+   width: 100%;
+   border-radius: 30px;
+   overflow: hidden;
+}
+
+.chat__accounts {
+   flex-direction: column;
+   align-items: center;
+   display: flex;
+   flex: 1 1 25%;
+   background-color: #2d313a;
+   border-right: 3px solid #238f2e;
+}
+
+.chat__account {
+   font-family: 'Overpass';
+   font-size: 20px;
+   color: #fff;
+   width: auto;
+   border-radius: 10px;
+   background-color: #22407c;
+   margin-top: 10px;
+   padding: 5px;
+}
+
+.chat__account_select {
+   background-color: #308446;
+}
+
+.area {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+
+   &__login {
+      background-color: #2d313a;
+      padding: 5px;
+      color: #308446;
+      font-size: 30px;
+      border-bottom: 3px solid #238f2e;
+   }
+
+   &__main {
+      flex-direction: column;
+      display: flex;
+      flex: 1 1 auto;
+      // height: 100%;
+      width: 100%;
+   }
+
+   &__content {
+      padding-top: 10px;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 1fr;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      width: 80%;
+      height: calc(100vh - 88px);
+   }
+
+   &__bottom {
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      flex: 0 0 40px
+   }
+
+   &__message {
+      width: auto;
+      display: inline-block;
+      margin-bottom: 5px;
+      & span {
+         display: inline-block;
+         background-color: #22407c;
+         padding: 6px;
+         font-family: 'Overpass';
+         font-size: 15px;
+         color: #fff;
+         border-radius: 10px;
+         max-width: 70%;
+      }
+      &_my {
+         display: flex;
+         & span {
+            // align-self: right;
+            margin-left: auto;
+            background-color: #308446;
+            display: inline-block;
+         }
+      }
+   }
+   &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__button {
+
+      font-family: 'Overpass';
+      height: 30px;
+      width: 100px;
+      // border-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-size: 15px;
+      color: #fff;
+      background-color: #308446;
+   }
+   &__input {
+      margin: 0;
+      height: 30px;
+      width: 250px;
+      font-size: 15px;
+      background-color: #22407c;
+      color: #fff;
+      padding: 0 10px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+   }
+}
+
+.chat__area {
+   flex: 1 1 75%;
+}

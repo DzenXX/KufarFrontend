@@ -1,0 +1,203 @@
+.chat__wrapper {
+  overflow: hidden;
+  display: flex;
+  background-color: #282c34;
+  height: 100vh;
+  width: 100%;
+}
+
+.chat__accounts {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex: 1 1 25%;
+  background-color: #2d313a;
+  border-right: 3px solid #238f2e;
+}
+
+.chat__account {
+  font-family: "Overpass";
+  font-size: 20px;
+  color: #fff;
+  width: auto;
+  border-radius: 10px;
+  background-color: #22407c;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.chat__account_select {
+  background-color: #308446;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.area__login {
+  background-color: #2d313a;
+  padding: 5px;
+  color: #308446;
+  font-size: 30px;
+  border-bottom: 3px solid #238f2e;
+}
+.area__main {
+  flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.area__content {
+  padding-top: 10px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 1fr;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 80%;
+  height: calc(100vh - 88px);
+}
+.area__bottom {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  flex: 0 0 40px;
+}
+.area__message {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.area__message span {
+  display: inline-block;
+  background-color: #22407c;
+  padding: 6px;
+  font-family: "Overpass";
+  font-size: 15px;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 70%;
+}
+.area__message_my {
+  display: flex;
+}
+.area__message_my span {
+  margin-left: auto;
+  background-color: #308446;
+  display: inline-block;
+}
+.area__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.area__button {
+  font-family: "Overpass";
+  height: 30px;
+  width: 100px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #308446;
+}
+.area__input {
+  margin: 0;
+  height: 30px;
+  width: 250px;
+  font-size: 15px;
+  background-color: #22407c;
+  color: #fff;
+  padding: 0 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.chat__area {
+  flex: 1 1 75%;
+}
+
+.bg-popup1 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.popup1 {
+  background: #282c34;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.account {
+  position: relative;
+}
+
+.auth-svg {
+  font-size: 30px;
+  color: #fff;
+}
+
+.green-auth-svg {
+  color: #308446;
+}
+
+.account__name {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: "Overpass";
+  color: #fff;
+}
+
+/* .password-textfield {
+   padding: 50px;
+} */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,41 @@
+
+
+.profile {
+   &__header {
+      display: flex;
+   }
+   &__image {
+      overflow: hidden;
+      border-radius: 40px;
+      margin-left: 35px;
+      margin-bottom: 23px;
+   }
+   &__info {
+      margin: 69px 0 0 40px;
+      color: $green;
+      font-weight: 500;
+      font-size: 20px;
+      font-family: Inter;
+   }
+   &__stars {
+      display: flex;
+   }
+   &__name {
+      margin-bottom: 10px;
+   }
+   &__icon {
+      position: relative;
+      top: -2px;
+      margin-right: 2px;
+   }
+   &__score {
+      margin-right: 5px;
+   }
+   &__line {
+      position: relative;
+      left: -1000px;
+      width: 10000px;
+      height: 3px;
+      background-color: $green;
+   }
+}

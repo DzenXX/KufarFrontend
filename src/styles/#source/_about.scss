@@ -1,0 +1,236 @@
+.about {
+    overflow: hidden;
+}
+
+.wrapper {
+    background-image: url(../img/alex-knight-5-GNa303REg-unsplashblacked.jpg); 
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.information {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 280px;
+    @media (max-width: 1260px) {
+        padding: 0 230px;
+    }
+    @media (max-width: 1150px) {
+        padding: 0 200px;
+    }
+    @media (max-width: 920px) {
+        padding: 0 180px;
+    }
+    @media (max-width: 790px) {
+        padding: 0 120px;
+    }
+    @media (max-width: 600px) {
+        padding: 0 80px;
+    }
+    @media (max-width: 500px) {
+        padding: 0 40px;
+    }
+    @media (max-width: 400px) {
+        padding: 0 15px;
+    }
+
+    &__slider {
+        height: 80%;
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        height: 100%;
+        width: 85%;
+        font-size: 28px;
+        font-family: "Overpass";
+        color: $white;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 920px) {
+            font-size: 24px;
+            width: 75%;
+        }
+        @media (max-width: 600px) {
+            font-size: 22px;
+        }
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        display: inline;
+        margin-bottom: 15px;
+        font-size: 48px;
+        font-family: "Overpass";
+        color: $white;
+        padding: 0 15px;
+        @media (max-width: 790px) {
+            font-size: 44px;
+        }
+        @media (max-width: 600px) {
+            font-size: 34px;
+        }
+    }
+
+    &__text {
+        opacity: 0.95;
+    }
+
+    &__link {
+        color: #00A550;
+        opacity: 0.95;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    &__divisor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width: 1150px) {
+            flex-direction: column;
+        }
+    }
+
+    &__mail,
+    &__github {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__github {
+        margin: 0 0 0 25px;
+        @media (max-width: 1150px) {
+            margin: 0;
+        }
+    }
+
+    &__team-idea {
+        margin-left: 25px;
+        @media (max-width: 1150px) {
+            margin: 0;
+        }
+    }
+}
+
+.bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding: 0 25px 0 25px;
+    @media (max-width: 920px) {
+        padding: 0 15px 0 15px;
+    }
+    @media (max-width: 790px) {
+        height: 72px;
+        flex-direction: column;
+        padding: 5px 15px 5px 15px;
+    }
+
+    &__media {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        @media (max-width: 1260px) {
+            width: 25%;
+        }
+        @media (max-width: 1150px) {
+            width: 28%;
+        }
+        @media (max-width: 920px) {
+            width: 30%;
+        }
+        @media (max-width: 790px) {
+            width: 45%;
+        }
+        @media (max-width: 600px) {
+            width: 55%;
+        }
+        @media (max-width: 500px) {
+            width: 65%;
+        }
+        @media (max-width: 400px) {
+            width: 70%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 36px;
+        text-decoration: none;
+        position: static;
+        @media (max-width: 790px) {
+            font-size: 40px;
+        }
+        @media (max-width: 500px) {
+            font-size: 36px;
+        }
+        @media (max-width: 400px) {
+            font-size: 28px;
+        }
+    }
+
+    &__svg {
+        width: 28px;
+        height: 28px;
+        fill: $brightGreen;
+        transition: 0.5s;
+        @media (max-width: 790px) {
+            width: 32px;
+            height: 32px;
+        }
+        @media (max-width: 500px) {
+            width: 28px;
+            height: 28px;
+        }
+        @media (max-width: 400px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__svg:hover {
+        fill: $green;
+        cursor: pointer;
+    }
+
+    &__copyright {
+        font-size: 12px;
+        font-family: "Overpass";
+        display: flex;
+        color: $white;
+        @media (max-width: 600px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.account__name {
+   color: #5EA93A;
+}
